@@ -1,0 +1,32 @@
+.title{
+    color: black;
+}
+
+.state {
+    color: green;
+}
+
+.countDown {
+    width: 40px!important;
+    color: blue!important;
+}
+
+.onTime {
+    width: 75px!important;
+    color:blue!important;
+}
+
+.offTime {
+    width: 75px!important;
+    color: blue!important;    
+}
+
+.deviceControl {
+    width: 38px;
+    color: #009688;
+}
+
+.remain {
+    color: blue;
+}
+
