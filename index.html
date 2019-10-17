@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="bootstrap-clockpicker.min.css">
-    <script type="text/javascript" src="bootstrap-clockpicker.min.js"></script>
 </head>
+
 <body>
-
-    <!-- <input type="text" data-bind="value: isLedOn1, valueUpdate: ['afterkeydown']"> -->
-
     <div class="jumbotron">
         <div class="container text-center">
             <h1>My OrangePi Zero</h1>
@@ -31,9 +22,7 @@
                 <span>The temperature is <span data-bind="text: curent"></span> °C</span>
                 <span>min is <span data-bind="text: min"></span> °C</span>
                 <span>max is <span data-bind="text: max"></span> °C</span>
-            </div>       
-
-            
+            </div>
 
             <div data-bind="with: time">
                 <div>
@@ -72,7 +61,7 @@
                     <span> >> </span>
                     <button class="btn btn-success" data-bind="click:  $parent.setTimer.bind($root, 'setOnTime')">Set</button>
                 </div>
-                
+
                 <div>
                     <span>Device </span>
                     <select data-bind="options: $root.deviceOption, value: deviceControl" class="deviceControl"></select>
@@ -86,9 +75,9 @@
 
             <hr>
 
-            <div class="row"  data-bind="foreach: listDevice">                
+            <div class="row" data-bind="foreach: listDevice">
                 <div class="col-sm-6">
-                    <span class="title" data-bind="text: name"> : </span>                
+                    <span class="title" data-bind="text: name"> : </span>
                     <span class="state" data-bind="text: state() === true ? 'ON' : 'OFF', 
                                     style: { color: state() === true ? 'red' : 'black' }"></span>
                     <span class="glyphicon glyphicon-ok-circle" data-bind="visible: state"></span>
@@ -100,38 +89,21 @@
                 </div>
             </div>
 
-
             <div>
                 <ul data-bind="foreach: log">
                     <li>
-                        <span style="color: green;"data-bind="text: fancyTimeFormat(time)"></span>
+                        <span style="color: green;" data-bind="text: fancyTimeFormat(time)"></span>
                         <span> s</span>
-                        <span style="color: blue;" >(^o^)</span>
+                        <span style="color: blue;">(^o^)</span>
                         <span data-bind="text: content.replace('_', '   ')"></span>
                     </li>
                 </ul>
             </div>
-
-
-
-            <!-- <div class="row" >
-                    <div class="col-sm-3">
-                        <span class="title">Led1 : </span>                
-                        <span class="state" data-bind="text: ledState"></span>
-                    </div>
-                    <div class="col-sm-3">
-                        <button class="btn btn-primary" data-bind="click: change.bind($root,'1')">change</button>
-                    </div>
-                </div> -->
         </div>
     </div>
-
-    <script type="text/javascript">
-        $('.clockpicker').clockpicker();
-    </script>
 
     <script src="knockout-3.4.2.js"></script>
     <script src="main.js"></script>
 </body>
-</html>
 
+</html>

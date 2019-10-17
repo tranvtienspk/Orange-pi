@@ -1,4 +1,4 @@
-.title{
+.title {
     color: black;
 }
 
@@ -13,12 +13,12 @@
 
 .onTime {
     width: 75px!important;
-    color:blue!important;
+    color: blue!important;
 }
 
 .offTime {
     width: 75px!important;
-    color: blue!important;    
+    color: blue!important;
 }
 
 .deviceControl {
@@ -29,4 +29,3 @@
 .remain {
     color: blue;
 }
-
